@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Submission Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <form name="submission-form" onsubmit="return errorAlert()">
+                <h2>Contact Form</h2>
+                <label for="name">Full name</label> <br>
+                <input type="text" id="name" placeholder="Full name" autofocus>
+                <br> <br> 
+
+                <label for="language">Language</label> <br>
+                <input type="text" id="language" placeholder="Language">
+                <br><br>
+
+                <label for="race">race</label> <br>
+                <input type="text" id="race" placeholder="race" >
+                <br><br>
+
+                <h2>Relocation</h2>
+                <label for="relocation">Are you open to relocate to Fatera?</label> <br>
+
+                <label class="radio-button">
+                    <input type="radio" id="yes_option" name="relocate" value="yes"> Yes
+                    <input type="radio" id="no_option" name="relocate" value = "no"> No
+                </label>
+                <br><br>
+
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+
+        <script src="logic.js"></script>
+    </body>
+</html>

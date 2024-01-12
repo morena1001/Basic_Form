@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+    color: white;
+    padding-top: 100px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    border: 2px solid;
+    border-radius: 20px;
+    margin: auto;
+    text-align: center;
+    width: 360px;
+}
+
+.radio-button {
+    vertical-align: middle;
+}
+
+.radio-button input[type='radio'] {
+    accent-color: black;
+}
+
+.radio-button input[type='radio']:hover {
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}
+
+#submit {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 8px 10px;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}

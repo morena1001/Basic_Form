@@ -1,0 +1,79 @@
+<?php
+            $nameErr = $languageErr = $raceErr = $relocateErr = "";
+            $name = $language = $race = $relocate = "";
+
+            if ($_SERVER["REQUEST_METHOD"] == "post") {
+                if (empty($_POST["name"])) {
+                    $nameErr = "Name is required";
+                }
+                else {
+                    $name = processInfo($_POST["name"]);
+                }
+
+                if (empty($_POST["language"])) {
+                    $languageErr = "Language is required";
+                }
+                else {
+                    $language = processInfo($_POST["language"]);
+                }
+
+                if (empty($_POST["race"])) {
+                    $raceErr = "Race is required";
+                }
+                else {
+                    $race = processInfo($_POST["race"]);
+                }
+
+                if (empty($_POST["relocate"])) {
+                    $relocateErr = "Relocate option is required";
+                }
+                else {
+                    $relocate = processInfo($_POST["relocate"]);
+                }
+            }
+
+            function processInfo($data) {
+                $data = trim($data);
+                $data = stripslashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
+            }
+        ?>
+
+
+
+
+        <!-- <form action="form_logic.php" method="post">
+                <h2>Contact Form</h2>
+                <p><span class="error">* required field</span></p>
+                <label for="name">Full name</label> <br>
+                <input type="text" id="name" placeholder="Full name" autofocus>
+                <br><span class="error">* <?php echo $nameErr;?></span><br> 
+
+                <label for="language">Language</label> <br>
+                <input type="text" id="language" placeholder="Language">
+                <br><span class="error">* <?php echo $languageErr;?></span><br>
+
+                <label for="race">race</label> <br>
+                <input type="text" id="race" placeholder="race" >
+                <br><span class="error">* <?php echo $raceErr;?></span><br>
+
+                <h2>Relocation</h2>
+                <label for="relocation">Are you open to relocate to Fatera?</label> <br>
+
+                <label class="radio-button">
+                    <input type="radio" id="yes_option" name="relocate" value="Yes"> Yes
+                    <input type="radio" id="no_option" name="relocate"> No
+                </label>
+                <br><span class="error">* <?php echo $relocateErr;?></span><br>
+
+                <input type="submit" value="Submit" id="submit">
+
+                <br>
+                <p id="test output"></p>
+            </form> -->
+        </div>
+
+        <?php
+        echo $name + "," + $language + "," + $race + "," + $relocate;
+        ?>
